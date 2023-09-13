@@ -1,0 +1,49 @@
+.text
+
+#1)
+#2+5
+li $t0,2
+li $t1,5
+add $t2,$t0,$t1
+
+#89+20
+li $t3,89
+li $t4,20
+add $t5,$t3,$t4
+
+#1234-80
+
+li $s0,1234
+li $s1,80
+sub $s2,$s0,$s1
+
+#70-24
+li $t6,70
+subi $t7,$t6,24
+
+#20-150
+li $s3,20
+li $s4,150
+sub $s5,$s3,$s4
+
+#2)
+
+li $v0,5
+addi $s7,$v0,30
+syscall
+
+#3)
+
+li $a0,1
+li $t8,54
+addi $a0,$t8,45
+syscall
+
+
+
+
+
+
+
+
+

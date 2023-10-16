@@ -1,0 +1,25 @@
+#Ler um valor e ver se ele é PAR ou IMPAR
+.data
+f: .asciiz "Entre com o número: "
+f_par: .asciiz "Par!"
+f_impar: .asciiz "Impar!"
+.text 
+li $v0, 4 #entra com um num
+la $a0, f
+li $t2, 2
+syscall
+li $v0, 5
+syscall
+add $t1, $v0, $0
+div $t1, $t2
+mfhi $t3  #move o valor do resto da divisão para $t3
+beqz $t3, par #diferente de zero, ele vai ser par
+	li $v0, 4
+	la $a0, f_impar
+	syscall
+	j fim
+par: li $v0, 4
+	syscall
+fim: li $v0, 10
+	syscall
+

@@ -1,0 +1,12 @@
+.text
+
+li $s1,1
+li $s2,2
+
+retorna:
+blt  $s2,5,L3
+     j fim
+L3: addi $s2,$s2,2
+    add $s1,$s1,1
+j retorna
+fim:

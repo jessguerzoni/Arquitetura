@@ -1,0 +1,18 @@
+.data
+a: .byte 4,5
+
+.text
+
+li $t1,0
+la $s1,a
+sw $t2,0($s1)
+li $t3,5
+
+blt $t2,$t3,menor
+    sw $s2,1($s1)
+    addi $t1,$s2,10
+    j exit
+menor: addi $t2,$t1,2
+exit:
+
+    
